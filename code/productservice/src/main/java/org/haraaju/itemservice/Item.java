@@ -1,4 +1,4 @@
-package org.haraaju.productservice;
+package org.haraaju.itemservice;
 
 
 
@@ -13,7 +13,7 @@ import java.util.Date;
 @Entity
 @Data
 @EntityListeners(AuditingEntityListener.class)
-public class Product {
+public class Item {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -21,7 +21,7 @@ public class Product {
 
     private String name;
 
-    @Column(columnDefinition = "NVARCHAR(4096)")
+    @Column(length = 4096)
     private String description;
 
     @Temporal(TemporalType.TIMESTAMP)

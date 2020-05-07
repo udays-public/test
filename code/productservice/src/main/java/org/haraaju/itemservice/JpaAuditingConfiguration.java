@@ -1,4 +1,4 @@
-package org.haraaju.productservice;
+package org.haraaju.itemservice;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
