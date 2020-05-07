@@ -1,0 +1,23 @@
+version: '3'
+services:
+  mydb:
+    image: postgres:12
+    volumes:
+      - haraaju-db-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+     POSTGRES_DB: haraaju-db
+     POSTGRES_USER: haraaju-admin
+     POSTGRES_PASSWORD: 1nf0M@t1cs
+    networks:
+     - docker-network
+
+
+volumes:
+  haraaju-db-data:
+
+
+networks:
+  docker-network:
+    driver: bridge
