@@ -1,0 +1,8 @@
+<ngb-carousel *ngIf="features" >
+    <ng-template ngbSlide *ngFor="let feature of features">
+        <div class="jumbotron">
+        <div class="container">
+            <h2>{{ feature }}</h2>
+        </div></div>
+    </ng-template>
+</ngb-carousel>

@@ -1,0 +1,10 @@
+<div class="jumbotron">
+    <div class="container"><p> Results for {{ searchtext}}</p></div>
+</div>
+
+
+<div class="container" *ngFor="let item of items">
+    <h3>{{ item.name }}</h3>
+    <p>{{ item.description }}</p>
+</div>
+
