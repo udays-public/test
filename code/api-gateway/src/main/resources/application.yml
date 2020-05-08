@@ -1,0 +1,19 @@
+zuul:
+  ignored-patterns: /actuator/**
+  routes:
+    itemsvc:
+      #url: http://webui:4200
+      path: /api/items/**
+      serviceId: itemservice
+    ui:
+      path: /ui/**
+      url: http://webui:4200/
+server:
+  port: 9000
+spring:
+  application:
+    name: api-gateway
+cloud:
+  consul.discovery:
+    instanceId: ${spring.application.name}:${random.value}
+

@@ -12,15 +12,21 @@ services:
      POSTGRES_PASSWORD: 1nf0M@t1cs
     networks:
      - docker-network
-
-  api:
-    image:  api-gateway:latest
+  webui:
+    image: haraaju-ui:latest
     ports:
-    - '9000:9000'
+    - '4200:80'
     networks:
-    - docker-network
-    depends_on: 
-    - consul
+     - docker-network
+
+  # api:
+  #   image:  api-gateway:latest
+  #   ports:
+  #   - '9000:9000'
+  #   networks:
+  #   - docker-network
+  #   depends_on: 
+  #   - consul
       
   itemservice:
     image:  itemservice:latest

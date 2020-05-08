@@ -1,16 +1,18 @@
-<header class="navbar navbar-expand  px-4 flex-column flex-md-row">
-    <a routerlink="/" >
-        <h4>HARAAJU</h4>
-    </a>
-    <div class="navbar-nav-scroll">
-        <ul class="navbar-nav flex-row"  >
-            <li class="nav-item active" [routerLinkActive]="['active']"  ><a class="nav-link" routerLink="/">Home</a></li>
-            <li class="nav-item" [routerLinkActive]="['active']" ><a class="nav-link" routerLink="/items">My Items</a></li>
-            <li class="nav-item" [routerLinkActive]="['active']" ><a class="nav-link" routerLink="/bids">My Bids</a></li>
-        </ul>
-    </div>
-    <div class="navbar-nav-scroll">
-        <input [(ngModel)]="searchtext" [ngModelOptions]="{standalone: true}">
-        <button (click)="OnSearch()">Search</button>
-    </div>
-</header>
+<div class="container">
+    <header class="navbar navbar-expand  px-4 flex-column flex-md-row">
+        <a routerlink="/" >
+            <h4>HARAAJU</h4>
+        </a>
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav flex-row"  >
+                <li class="nav-item active" [routerLinkActive]="['active']"  ><a class="nav-link" routerLink="/">Home</a></li>
+                <li class="nav-item" [routerLinkActive]="['active']" ><a class="nav-link" routerLink="/items">My Items</a></li>
+                <li class="nav-item" [routerLinkActive]="['active']" ><a class="nav-link" routerLink="/bids">My Bids</a></li>
+            </ul>
+        </div>
+        <div class="navbar-nav-scroll">
+            <input [(ngModel)]="searchtext" [ngModelOptions]="{standalone: true}">
+            <button (click)="OnSearch()">Search</button>
+        </div>
+    </header>
+</div>
